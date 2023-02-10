@@ -5,8 +5,6 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-void solve();
-
 int main()
 {
     ios::sync_with_stdio(0);
@@ -14,15 +12,12 @@ int main()
     int t; cin >> t;
     for (int i = 0; i < t; i++) {
         int n; cin >> n;
-        ll a[n] = {0};
+        int cnt1 = 0; int x = 0;
         for (int j = 0; j < n; j++) {
-            cin >> a[i];
+            cin >> x;
+            cnt1 += (x == 1);
         }
-        solve();
+        cout << n - cnt1 / 2 << endl;
     }
     return 0;
-}
-
-void solve() {
-    // code
 }
