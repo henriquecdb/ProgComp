@@ -1,24 +1,33 @@
 #include <iostream>
-#include <set>
+#include <unordered_set>
 
 using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
 
-int main() {
-  int n;
-  cin >> n;
-  set<int> numerosProibidos;
-  for (int i = 0; i < n; i++) {
-    int p;
-    cin >> p;
-    numerosProibidos.insert(p);
-  }
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int N;
+    cin >> N;
 
-  int aux;
-  while (cin >> aux) {
-    cout << (numerosProibidos.count(aux) ? "sim" : "nao") << endl;
-  }
-  return 0;
+    unordered_set<int> proibidos;
+    for (int i = 0; i < N; ++i) {
+        int numero;
+        cin >> numero;
+        proibidos.insert(numero);
+    }
+
+    int consulta;
+    while (cin >> consulta) {
+        if (proibidos.count(consulta)) {
+            cout << "sim\n";
+        } else {
+            cout << "nao\n";
+        }
+    }
+
+    return 0;
 }
