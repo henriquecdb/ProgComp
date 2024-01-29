@@ -1,6 +1,6 @@
 all:
-	g++ main.cpp -o main
+	g++ -Wall -std=c++17 arquivo.cpp
 clean:
 	rm main
 run:
-	./main
+	time ./a.exe < arquivo.in > my.sol 
