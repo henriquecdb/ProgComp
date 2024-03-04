@@ -1,5 +1,5 @@
 all:
-	g++ -Wall -std=c++17 main.cpp
+	g++ -Wall -std=c++17 bee1089.cpp
 clean:
 	rm main
 run:

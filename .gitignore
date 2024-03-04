@@ -35,3 +35,7 @@
 *.cph
 main.cpp
 *.txt
+
+my.sol
+arquivo.in
+arquivo.sol
