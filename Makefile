@@ -1,5 +1,7 @@
+src = main.cpp
+
 all:
-	g++ -Wall -std=c++17 bee1089.cpp
+	g++ -Wall -std=c++17 $(src)
 clean:
 	rm main
 run:
